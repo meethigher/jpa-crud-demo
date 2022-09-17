@@ -1,0 +1,10 @@
+spring:
+  jpa:
+    database-platform: org.sqlite.hibernate.dialect.SQLiteDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+      naming:
+        # SpringPhysicalNamingStrategy: 改为驼峰命名，之后将每个大写的转为_小写，比如schoolId转为school_id
+        # PhysicalNamingStrategyStandardImpl: 原样命名
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
